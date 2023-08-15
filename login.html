@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMS | Log in</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ 
+</head>
+
+<body>
+    
+    <!--regestration page-->
+    <div class="vh-100 row align-items-center">
+        <div class="col-7">
+            <form class="m-auto col-8 p-4 shadow-lg rounded rounded-4">
+                <p class="text-center mb-2 fw-bolder fs-5">Mamber Login</p>
+                <div class="vstack gap-3 mt-2">
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">User ID :<span id="uid-p"></span></p>
+                        <input type="text" class="form-control fs-6 p-1" id="login-uid" autocomplete="off"/>
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Password :<span id="pw-p"></span></p>
+                        <input type="password" class="form-control fs-6 p-1" id="login-pw" />
+                    </div>
+                    <div class="mt-3 hstack gap-2 justify-content-center">
+                        <input type="button" class="btn btn-success fs-6 fw-bold col" value="login" id="login-btn">
+                        <input type="button" class="btn btn-success fs-6 fw-bold col" value="Forgot Password">
+                    </div>
+                    <hr class="mt-2">
+                    <p class="text-center">Don't have an account <a class="link-success fw-bold"
+                            href="registration.html">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="col-5 vh-100" id="bg-img">
+            <div class="mt-6">
+                <p class="ms-2 fw-semibold">Welecome to</p>
+                <h2 class="ms-4 fw-bold">Veer Savarkar Co. Op. Society</h2>
+            </div>
+        </div>
+    </div>
+     <!-- javascript -->
+     <script src="assets/javascript/main.js"></script>
+</body>
+</html>

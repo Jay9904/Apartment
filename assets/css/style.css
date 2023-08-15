@@ -1,0 +1,206 @@
+* {
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--bs-light);
+}
+
+#main {
+    transition: all 1s linear;
+}
+
+#bg-img {
+    background-image: url('/assets/img/6961783.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.mt-6 {
+    margin-top: 6rem !important;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.fs-6 {
+    font-size: 0.85rem !important;
+}
+
+.bg-gradiant {
+    background-color: antiquewhite;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.form-control {
+    box-shadow: 0.75px 0.75px 0.75px 0.75px black;
+}
+
+#list li {
+    background-color: transparent;
+    font-weight: bold;
+    border: 2px solid var(--bs-dark);
+    border-radius: 0.25rem;
+    transition: all 0.25s linear;
+}
+
+.text-c1 {
+    color: #303030 !important;
+}
+
+#list li:hover {
+    scale: 1.03;
+    box-shadow: 0px 3px 0px 0px black;
+    transition: all 0.25s linear;
+}
+
+/* colors */
+.bg-1 {
+    color: #303030;
+    background-image: linear-gradient(92.7deg, #fdf0d5 8.5%, #ffe29a 180%);
+}
+
+#tst:hover {
+    scale: 1.02;
+    box-shadow: 0px 3px 0px 0px black;
+    transition: all 0.25s linear;
+}
+
+#paid {
+    color: green;
+    font-weight: 700;
+}
+
+#unpaid {
+    color: red;
+    font-weight: 700;
+}
+
+/* Notice */
+#notice {
+    white-space: nowrap;
+    animation: run 20s linear infinite;
+}
+
+@keyframes run {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+/* navbar */
+.navbar {
+    width: -webkit-fill-available;
+    z-index: 10;
+}
+
+/* registration form */
+#sub-msg {
+    display: none;
+}
+
+.wing-p::after {
+    content: "";
+    color: red;
+}
+
+/* complain model */
+#comp-model {
+    display: none;
+    transition: all 1.5s linear;
+}
+
+#comp-done {
+    display: none;
+    transition: all 1.5s linear;
+}
+
+/* animation */
+.tindownin {
+    animation-name: tindownin;
+    animation-duration: 1s;
+}
+
+@keyframes tindownin {
+
+    0% {
+        opacity: 0;
+        transform: scale(1);
+        transform: translateY(300%) !important;
+
+    }
+
+    50%,
+    70%,
+    90% {
+        opacity: 1;
+        transform: scale(1.1) translateY(0);
+    }
+
+    60%,
+    80%,
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Invoice */
+#create-invoice {
+    display: none;
+}
+
+#in-done {
+    display: none;
+    scale: 1;
+    transform : translate(-30px, -30px);
+}
+
+/* logout */
+#lo-sec{
+    display: none;
+    transform: translate(-60px,-50px);
+}
+
+
+
+@keyframes swap {
+    0% {
+        opacity: 0;
+        transform: scale(0) translate(-700px);
+        transform-origin: 0 100%
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translate(0);
+        transform-origin: 100% 100%
+    }
+}
+
+@keyframes puffOut {
+    0% {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: 50% 50%
+    }
+
+    to {
+        filter: blur(2px);
+        opacity: 0;
+        transform: scale(2);
+        transform-origin: 50% 50%
+    }
+}

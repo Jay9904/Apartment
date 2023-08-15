@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMS</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="row" id="main">
+        <div class="col-2 vh-100 bg-1 rounded-end-3 border d-none d-lg-block " id="lf">
+            <h3 class="text-center fw-bolder"><i class="fa-solid fa-building-shield me-2"></i>AMS</h3>
+            <div class="mt-3">
+                <ul class="list-group gap-2 " id="list">
+                    <a href="admin.html" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Dashboard</li>
+                    </a>
+                    <a href="units.html" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Resident Units</li>
+                    </a>
+                    <a href="" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Documents</li>
+                    </a>
+                    <a href="complain.html" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Complains</li>
+                    </a>
+                    <a href="" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Visiter Management</li>
+                    </a>
+                    <a href="" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Services & Facility</li>
+                    </a>
+                    <a href="accounts.html" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Accounts</li>
+                    </a>
+                    <a href="" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Assets & Inventery</li>
+                    </a>
+                    <a href="" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Reports</li>
+                    </a>
+                    <a href="profile.html" class="text-decoration-none">
+                        <li class="list-group-item list-group-item-action text-c1">Profile</li>
+                    </a>
+                    <li class="list-group-item list-group-item-action text-c1" onclick="logOut()">Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <!-- main -->
+        <div class="col-lg-10 col-12" id="rt">
+            <!-- navbar -->
+            <nav class="navbar bg-1 rounded-bottom-4">
+                <div class="container-fluid">
+                    <h3 class="navbar-brand">Welcome, <strong>Jaykumar...</strong></h3>
+                    <form class="d-flex d-none d-lg-flex">
+                        <input type="search" class="form-control me-2" placeholder="Search...">
+                        <button class="btn btn-outline-danger fw-bolder">Search</button>
+                    </form>
+                    <div>
+                        <button class="btn btn-outline-danger me-2 rounded-circle"><i
+                                class="fa-regular fa-bell"></i></button>
+                        <img src="assets/img/me.jpg" alt="" class="img-fluid rounded-circle"
+                            style="width: 3.5rem; height: 3.5rem;">
+                    </div>
+                </div>
+            </nav>
+            <!-- admin -->
+            <div class="container-fluid mt-3">
+                <!-- notice board -->
+                <div class="p-2 border border-dark rounded overflow-hidden">
+                    <p id="notice" class="fw-bolder">We Are so excited to celebrate one of our nation's
+                        greatest festivals, Ganesh Chaturthi, this year on September 19, 2023. So I hardly invite all
+                        society members for preparation of the festival on Saturday at 10 p.m.</p>
+                </div>
+                <!-- major -->
+                <div class="row text-center gap-2 mt-3">
+                    <div class="col border border-dark rounded p-3" id="tst">
+                        <p class="fs-1"><i class="fa-solid fa-person"></i></p>
+                        <p class="fw-semibold">Members</p>
+                    </div>
+                    <div class="col border border-dark rounded p-3 complain-sec" id="tst" onclick="writeComplain()">
+                        <p class="fs-1"><i class="fa-solid fa-dumpster-fire"></i></p>
+                        <p class="fw-semibold">Complain</p>
+                    </div>
+                    <div class="col border border-dark rounded p-3" id="tst">
+                        <p class="fs-1"><i class="fa-solid fa-triangle-exclamation"></i></p>
+                        <p class="fw-semibold">Notice</p>
+                    </div>
+                    <div class="col border border-dark rounded p-3" id="tst">
+                        <p class="fs-1"><i class="fa-solid fa-file-invoice"></i></p>
+                        <p class="fw-semibold">Accounts</p>
+                    </div>
+                    <div class="col border border-dark rounded p-3" id="tst">
+                        <p class="fs-1"><i class="fa-solid fa-flag"></i></p>
+                        <p class="fw-semibold">Reports</p>
+                    </div>
+                </div>
+                <div class="row mt-3 gap-3">
+                    <!-- invoice  -->
+                    <div class="col border border-dark rounded p-3">
+                        <h4><i class="fa-solid fa-file-invoice-dollar me-3 ms-2"></i>Invoices</h4>
+                        <table class="table table-striped mt-3 text-center table-hover">
+                            <thead>
+                                <th scope="col">No.</th>
+                                <th scope="col">Flat No.</th>
+                                <th scope="col">Invoice No.</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Status</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>A-401</td>
+                                    <td>VEER-012</td>
+                                    <td>450.00</td>
+                                    <td id="paid">Paid</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>A-901</td>
+                                    <td>VEER-015</td>
+                                    <td>850.00</td>
+                                    <td id="paid">Paid</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>B-804</td>
+                                    <td>VEER-022</td>
+                                    <td>300.00</td>
+                                    <td id="unpaid">Unpaid</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>C-103</td>
+                                    <td>VEER-050</td>
+                                    <td>1000.00</td>
+                                    <td id="unpaid">Unpaid</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- complain -->
+                    <div class="col border border-dark rounded p-3">
+                        <h4><i class="fa-solid fa-dumpster-fire me-3 ms-2"></i>Complain</h4>
+                        <table class="table table-striped mt-3 text-center table-hover">
+                            <thead>
+                                <th scope="col">No.</th>
+                                <th scope="col">Flat No.</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Status</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>A-401</td>
+                                    <td>Water Issue</td>
+                                    <td class="text-success fw-bolder">Complete</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>B-703</td>
+                                    <td>Dranage Issue</td>
+                                    <td class="text-success fw-bolder">Complete</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>D-202</td>
+                                    <td>Electricity Issue</td>
+                                    <td class="text-danger fw-bolder">Panding</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>B-503</td>
+                                    <td>Parking Issue</td>
+                                    <td class="text-warning fw-bolder">On Proccess</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row gap-3 mt-3">
+                    <!-- gate keeper -->
+                    <div class="col border border-dark p-3 rounded">
+                        <h4><i class="fa-brands fa-watchman-monitoring ms-2 me-3"></i>Gate Keeper</h4>
+                        <table class="table table-hover table-striped mt-3 text-center">
+                            <thead>
+                                <th scope="col">No.</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">IN/OUT</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>V-01</td>
+                                    <td>Vignesh Kumar</td>
+                                    <td class="text-success fw-bold">IN</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>V-03</td>
+                                    <td>Rakesh Sharma</td>
+                                    <td class="text-success fw-bold">IN</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>V-02</td>
+                                    <td>Piyush Bhagat</td>
+                                    <td class="text-danger fw-bold">Out</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>V-04</td>
+                                    <td>Sureshbhai</td>
+                                    <td class="text-danger fw-bold">Out</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col border border-dark p-3 rounded">
+                        <h4><i class="fa-brands fa-watchman-monitoring ms-2 me-3"></i>Accounts</h4>
+                        chart
+                    </div>
+                </div>
+                <!-- Visiter List -->
+                <div class="mt-3 border border-dark p-3 rounded">
+                    <h4><i class="fa-solid fa-user-astronaut ms-2 me-3"></i>Visiter List</h4>
+                    <table class="table table-hover table-striped mt-3 text-center table-responsives">
+                        <thead>
+                            <th scope="col">No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Flat No</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">IN/OUT</th>
+                            <th scope="col">Status</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Akshay Pandya</td>
+                                <td>B-502</td>
+                                <td>20-07-2023</td>
+                                <td>10.21 PM</td>
+                                <td class="text-success fw-bold">IN</td>
+                                <td class="text-success fw-bold">Approved</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Piyush Garg</td>
+                                <td>B-802</td>
+                                <td>20-07-2023</td>
+                                <td>5.10 PM</td>
+                                <td class="text-success fw-bold">IN</td>
+                                <td class="text-success fw-bold">Approved</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Vikas Zala</td>
+                                <td>C-804</td>
+                                <td>20-07-2023</td>
+                                <td>9.55 PM</td>
+                                <td class="text-success fw-bold">IN</td>
+                                <td class="text-danger fw-bold">Panding</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Nitaben</td>
+                                <td>D-101</td>
+                                <td>20-07-2023</td>
+                                <td>10.50 AM</td>
+                                <td class="text-success fw-bold">IN</td>
+                                <td class="text-danger fw-bold">Panding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Canvas -->
+    <div class="complain-canvas position-fixed top-50 start-50 translate-middle col-6" id="comp-model">
+        <div class="cantainer p-3 rounded-3 bg-1">
+            <h4 class="text-center fw-bold border-bottom border-dark border-2 lh-lg">Write Your Complain</h4>
+            <form action="" class="m-auto col-10 mt-2">
+                <p class="lh-lg fw-semibold fs-5">Title</p>
+                <input type="text" id="comp-title" class="form-control" placeholder="Complain Title" id="comp-title">
+                <p class="lh-lg fw-semibold">Discription</p>
+                <textarea cols="30" rows="5" class="form-control" placeholder="Write Complain In Discription"
+                    id="comp-disp"></textarea>
+                <div class="text-end my-3">
+                    <input type="button" value="Submite" class="btn btn-success me-2 fw-bolder"
+                        onclick="saveComplain()">
+                    <input type="button" value="Cancel" class="btn btn-dark fw-bolder"
+                        onclick="document.getElementById('comp-model').style.display = 'none';document.getElementById('main').style.opacity = '1';">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- complain success -->
+    <div class="position-fixed top-50 start-50 translate-middle col-4" id="comp-done">
+        <div class="bg-1 text-center py-2 border-bottom border-3 border-dark rounded-3"><strong>Complain Register
+                Successfully...</strong></div>
+    </div>
+    <!-- logout section-->
+    <div id="lo-sec" class="position-fixed top-50 start-50 ">
+        <div class="bg-1 p-3 border border-dark border-2 rounded text-center gap-3 hstack ">
+            <strong>Do you Want to Logout?</strong>
+                <button class="btn btn-success px-4 fw-bold" onclick="loYes()">Yes</button>
+                <button class="btn btn-danger px-4 fw-bold" onclick="loNo()">No</button>
+        </div>
+    </div>
+
+
+    <!-- javascript -->
+    <script src=" assets/javascript/main.js"></script>
+
+</body>
+
+</html>

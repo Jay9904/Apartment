@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMS | Registration</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!--regestration page-->
+    <div class="vh-100 row align-items-center" id="main">
+        <div class="col-7">
+            <form class="m-auto col-8 p-3 shadow-lg rounded rounded-4" id="signup-form">
+                <p class="text-center mb-2 fw-bolder fs-5">Member Registration form</p>
+                <div class="hstack gap-2">
+                    <div class="col">
+                        <p class="lh-lg fs-6 fw-semibold">Select Wing :<span id="wing-p"></span></p>
+                        <select class="text-muted form-control fs-6 p-1" id="wing" required>
+                            <option>Select Wing</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <p class="lh-lg fs-6 fw-semibold">Select Flat :<span id="flat-p"></span></p>
+                        <select class="text-muted form-control fs-6 p-1" id="flat" required>
+                            <option id="flatOp">Select Flat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="lh-lg fs-6 fw-semibold">Owned / Tenent :<span id="owner-p"></span></p>
+                    <select class="text-muted form-control fs-6 p-1" id="owner" required>
+                        <option>Select</option>
+                        <option>Owned</option>
+                        <option>tenent</option>
+                    </select>
+                </div>
+                <div class="vstack gap-2 mt-2">
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Name :<span id="name-p"></span></p>
+                        <input type="text" class="form-control fs-6  p-1" id="name" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Mobile No :</p>
+                        <input type="number" class="form-control fs-6  p-1" id="mobile" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Email ID :</p>
+                        <input type="email" class="form-control fs-6  p-1" id="email" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Date Of Birth :</p>
+                        <input type="date" class="form-control fs-6  p-1" id="dob" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">User ID :</p>
+                        <input type="text" class="form-control fs-6  p-1" id="user" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <p class="lh-lg fs-6 fw-semibold">Password :</p>
+                        <input type="password" class="form-control fs-6 p-1" id="password" required  autocomplete="off"/>
+                    </div>
+                    <div class="mt-2 hstack gap-2 justify-content-center">
+                        <input type="button" class="btn btn-success fs-6 fw-bold col" value="Submit" id="form-submit">
+                        <input type="button" class="btn btn-success fs-6 fw-bold col" value="Reset" id="form-reset">
+                    </div>
+                    <hr class="mt-2">
+                    <p class="text-center">Alredy Register <a class="link-success fw-bold" href="login.html">Log in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-5 vh-100" id="bg-img">
+            <div class="mt-6">
+                <p class="ms-2 fw-semibold">Welecome to</p>
+                <h2 class="ms-4 fw-bold">Veer Savarkar Co. Op. Society</h2>
+            </div>
+        </div>
+    </div>
+    <!-- success model -->
+    <div class="top-50 start-50 translate-middle position-fixed pt-3 px-5 border border-dark rounded rounded-3 bg-success-subtle text-center" id="sub-msg" >
+        <p class="mb-2 fw-bold">Submite Successfully</p>
+        <div class="p-2 border-top border-dark">
+            <button class="btn btn-success col-6 p-1 fw-bolder fs-6" id="sub-ok">OK</button>
+        </div>
+    </div>
+   
+    <!-- javascript -->
+    <script src="assets/javascript/main.js"></script>
+</body>
+
+</html>
